@@ -1,0 +1,40 @@
+.home-component {
+  display: flex;
+}
+.size-col {
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.size-3 {
+  max-width: 33.33333%;
+  width: 33%;
+  display: flex;
+}
+.size-7 {
+  max-width: 55.66666%;
+  width: 55%;
+  height: 80.5vh;
+  overflow: auto;
+}
+.size-2 {
+  width: 12%;
+  max-width: 12%;
+}
+.hz-seperator {
+  border: 1px solid black;
+}
+
+.flex-50 {
+  width: 50%;
+}
+
+.link-block {
+  padding: 20px 5px;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+}

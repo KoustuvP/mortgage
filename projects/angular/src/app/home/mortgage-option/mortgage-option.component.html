@@ -1,0 +1,41 @@
+<h3 class="f-w-b">Mortgage Options</h3>
+<p>> Filter Mortgage options</p>
+
+<p>The APRC is not shown in this table beacuse it's based on the product your choose.
+    You'll be able to check your ARPC on the mortgage illustration when you've chosen a mortgage product.
+    You can compare as many Mortgage illustration as you want to help you decide on the right product for you</p>
+
+<mat-toolbar class="bg-red">
+    <p class="option" *ngFor="let option of options">{{option}}</p>
+</mat-toolbar>
+
+
+<h4><b>Free Valuation -</b></h4>
+<P>Availabilty on a property valued up to 2.5 million.</P>
+
+<h4><b>Early repayment changes (ending your mortgage)</b></h4>
+
+<p><b>Fixed rates -</b> You can overpay up to 10% each calender year(January tp December)
+    on your fixed rate loan amount.without paying an early repayment charge. A minimum payment of 500 applies.
+    If you want to pay off more than 10%. You'll need to pay an early repaymnet charges.
+</p>
+
+<p><b>Tracker rates -</b>You can make unlimited overpayments on our tracker rate mortgage without paying an early
+    repayment charges.
+    a mimimum paymnet of 500 applies.</p>
+
+<p><b>*1% cashback for 1/2/3 current account and 1/2/3 lite current account customers</b>
+    for more details visit <a
+        href='santander.co.up/personal/cuurent-accounts'>santander.co.up/personal/cuurent-accounts</a></p>
+
+
+<h3>Important information</h3>
+<h4>
+    YOUR HOME MAY BE REPOSSESSED IFYOU DO NOT KEEP UP REPAYMENTS ON YOUR MORTGAGE
+</h4>
+<p>
+    Allapplications are subject to status and our lending criteria. This means that the amount we will lend you will
+    depend on your individualcircumstances, the type of property and the amount you borrow. For example, we may require
+    a higher deposit if you are buying a flat or a new build property.
+</p>
+<button mat-flat-button class="oval-btn" color="warn" (click)="onSaveAndContinue()"> Save and Continue</button>

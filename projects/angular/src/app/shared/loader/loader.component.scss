@@ -1,0 +1,75 @@
+.loader-container{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: cornsilk;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+// .stage {
+//     width: 1000px;
+//     height: 1000px;
+//     background:#e5fffb;
+//     perspective:1000px;
+// 	perspective-origin:50% 50%;
+// 	}
+
+// @keyframes content{
+// to{transform:rotateX(360deg) rotateY(360deg);}}
+
+
+
+// .content{transform-style: preserve-3d; animation:content 6s linear both  infinite ;position: absolute;top:400px; left:400px;width:200px; height:200px;transform-origin:50% 50% ;
+//   }
+
+// #cubic1{transform:translateZ(100px); }
+// #cubic2{transform:translateZ(-100px);}
+// #cubic3{transform:rotateX(90deg) translateZ(-100px)  }
+// #cubic4{transform:rotateY(-90deg) translateZ(100px)}
+// #cubic5{transform:rotateX(-90deg)translateZ(-100px);}
+// #cubic6{transform: rotateY(90deg) translateZ(100px);}
+// .content rect{fill:none; stroke-width:4; stroke:#f29a76}
+// .content SVG {opacity:1;position: absolute;width:200px; height:200px}
+
+
+
+// @keyframes content2{
+// 0%{transform:rotateX(-180deg) rotateY(-180deg);}
+// 100%{transform:rotateX(180deg) rotateY(180deg);}
+// }
+// .content2{transform-style: preserve-3d; animation:content2 6s linear both  infinite ;position: absolute;top:250px; left:450px;width:100px; height:100px;
+//   }
+
+// #cubic7{fill:#f29a76;transform:translateZ(50px);}
+// #cubic8{fill:#61BFBE;transform:translateZ(-50px);}
+// #cubic9{fill:#BADDD6;transform:rotateX(90deg) translateZ(-50px)}
+// #cubic10{fill:#FFB5BA;transform:rotateY(-90deg) translateZ(50px)}
+// #cubic11{fill:#866667;transform:rotateX(-90deg)translateZ(-50px);}
+// #cubic12{fill:#E25D6E;transform: rotateY(90deg) translateZ(50px);}
+// .content2 SVG {opacity:1;position: absolute;width:100px; height:100px}

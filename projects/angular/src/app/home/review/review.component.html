@@ -1,0 +1,47 @@
+<mat-accordion>
+    <mat-expansion-panel  *ngFor="let panel of panels">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="fl-l">{{panel.title}}</span>             
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div >
+            <div *ngFor="let item of panel.data | keyvalue" class="d-f">
+                <span class="f-i">{{item.key | unknownToString | propertyToWord}}:</span>
+                <span class="f-i">{{item.value}}</span>
+            </div>
+        </div>
+        <mat-action-row>
+            <!-- <button mat-button color="warn" (click)="prevStep()">Previous</button> -->
+            <a [routerLink]="panel.link"><mat-icon>edit</mat-icon></a>
+          </mat-action-row>
+        <!-- <p *ngIf="panel!='Property Details'">This is the primary content of the panel.</p> -->
+    </mat-expansion-panel>
+</mat-accordion>
+<h5>Declaration</h5>
+<h5>By Selecting to continue Below:</h5>
+<p>
+    You confirm that the details in this application are accurate and you have entitled to discuss information about any
+    joint applicants,partners/spouse or other third party named on the application. You understand that Santander will
+    use your information to carry out a soft credit check against all applicants with credits reference agencies.A soft
+    credit check will show on your credit file so you will know that the search has taken place but it doesnot affect
+    your credit rating.You have read the Data Protection Statement below.You understand that Santander will use your
+    personal data and make checks on you as described in the Data Protection Statement.
+</p>
+<h5>General Mortggge Declaration> </h5>
+<h5>Data Protection Statement></h5>
+<p>If there is anything within this applicants that you are unsure about please contact us before processing</p>
+<p>01 agree to the Declaration,General Mortgage Declaration and Data Protection Statement</p>
+<div class="d-f">
+    <div class="f-i">
+        <button mat-flat-button color="warn" class="oval-btn">Save_Back</button>
+    </div>
+    <div f-i>
+        <button mat-flat-button color="warn" class="oval-btn">Save_continue</button>
+    </div>
+    
+    
+</div>
+<div>
+    <app-notice></app-notice>
+</div>

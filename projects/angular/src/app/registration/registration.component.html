@@ -1,0 +1,103 @@
+<
+    <div class="form-wrapper">
+        <form [formGroup]="registrationForm"  (ngSubmit)="onRegistration()">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. pat@example.com">
+                    <mat-hint></mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+               </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput [formControl]="passwordFormControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput [formControl]="firstNameControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="firstNameControl.hasError('required')">
+                      First name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input type="password" matInput [formControl]="lastNameControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="lastNameControl.hasError('required')">
+                      Last Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Security question</mat-label>
+                    <input type="text" matInput [formControl]="securityQuestionControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="securityQuestionControl.hasError('required')">
+                      Security question is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Security answer</mat-label>
+                    <input type="text" matInput [formControl]="securityAnswerControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="lastNameControl.hasError('required')">
+                      Last Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input type="date" matInput [formControl]="dobControl"
+                           >
+                    <mat-hint></mat-hint>
+                    <!-- <mat-error *ngIf=" !passwordFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error> -->
+                    <mat-error *ngIf="dobControl.hasError('required')">
+                      DOB is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+              <button mat-flat-button color="warn" class="register">Register </button>
+        </form>

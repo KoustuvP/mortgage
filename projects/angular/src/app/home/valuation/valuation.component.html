@@ -1,0 +1,52 @@
+<h3 class="f-w-b">Your valuation contact details</h3>
+<p>Is the property in scotland ?</p>
+<button mat-stroked-button (click)="setLocationScotland(1)">Yes</button>
+<button mat-stroked-button (click)="setLocationScotland(0)">No</button>
+<h3>What happens next ?</h3>
+<p>
+    We'll complete a valuation when you're submitted your application and we've checked your documents. if you required
+    a survey then you shuld arrange this yourself. We've emailed you a 'Straightforward Guide to your Mortgage' which
+    has details about how you could arrange this.
+</p>
+<h3>Who should we contact if we need to arrange a valuation?*</h3>
+<div>
+    <mat-form-field >
+        <mat-label>Select</mat-label>
+        <mat-select [formControl]="contactPerson">
+          <mat-option *ngFor="let person of persons" [value]="person">
+            {{person}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Contact Name</mat-label>
+        <input type="text" matInput [formControl]="contactName">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="contactName.hasError('required')">
+            Contact name is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Contact Number</mat-label>
+        <input type="number" matInput [formControl]="contactNumber">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="contactNumber.hasError('required')">
+            Contact number is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<h3>Your Purchase</h3>
+<p>
+    Are you purchasing the property from the seller directly as a private sale? e.g. without using an estate
+    agent,property developer or boker *
+</p>
+<button mat-stroked-button >Yes</button>
+<button mat-stroked-button >No</button>
+<div>
+    <button mat-flat-button color="warn" [disabled]="!valuationForm.valid" class="oval-btn" (click)="onSaveAndContinue()">Save_continue</button>
+</div>
+

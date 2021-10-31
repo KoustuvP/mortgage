@@ -1,0 +1,16 @@
+<header>
+
+  <nav class="navbar j-c-b navbar-dark bg-red">
+    <a class="navbar-brand" [routerLink]="'.'"><img src="../../../assets/icons/sant-logo.svg"></a>
+
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+      <div class="d-f" *ngIf="userName">
+        <span class="f-i">Welcome, {{userName}}</span>
+        <span class="f-i"><button mat-stroked-button (click)="onLogOut()">Log Out</button></span>
+      </div>
+
+
+  </nav>
+
+
+</header>

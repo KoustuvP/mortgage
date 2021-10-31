@@ -1,0 +1,35 @@
+<h3>Other Occupants</h3>
+<p>
+    Please provide details of anyone over the age of 17 who will be living at the property but who isn't named on the
+    mortgage application.
+    We'll meed the details so that we can send them a standard deed of consant form to make sure they don't claim rights
+    over the property while they're living in it
+</p>
+<h4>Other Occupants</h4>
+<h5>Will there be anyone over the age of 17 livingwith you who is not named onthe mortgage?*</h5>
+<button mat-stroked-button [ngClass]="{'selected': otherOccupant.value=='Yes'}"  (click)="setOtherOccupant('Yes')">Yes</button>
+<button mat-stroked-button [ngClass]="{'selected': otherOccupant.value=='No'}"  (click)="setOtherOccupant('No')">No</button>
+<div class="solicitor-details">
+    <h3>olicitor details</h3>
+    <p>
+        You'll need a Solicitor or conveyancer to deal with things like land registry.stamp duty charges and collecting
+        and transferring
+        money for the property
+    </p>
+    <h4>About your solicitor</h4>
+    <h5>
+        you must appoint a Santander approved solicitor/conveyancer to dealwith your mortgage application
+        Would you liketo search and select a solicitor or conveyancer from our approved panel now?*>
+    </h5>
+    <button mat-stroked-button [ngClass]="{'selected': santanderPanel.value=='Yes'}" (click)="setSolicitorPanel('Yes')">Yes</button>
+    <button mat-stroked-button [ngClass]="{'selected': santanderPanel.value=='No'}" (click)="setSolicitorPanel('No')">No</button>
+    <h5>
+        Do you want to submitthis application without solicitor or conveyancer details and provide them later? This
+        could delay your application.*
+    </h5>
+    <button mat-stroked-button [ngClass]="{'selected': withoutSolicitor.value=='Yes'}" (click)="setWithoutSolicitor('Yes')">Yes</button>
+    <button mat-stroked-button [ngClass]="{'selected': withoutSolicitor.value=='No'}" (click)="setWithoutSolicitor('No')">No</button>
+</div>
+<div>
+    <button mat-flat-button color="warn" class="oval-btn" (click)="onSaveAndContinue()">Save_continue</button>
+</div>

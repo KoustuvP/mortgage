@@ -1,0 +1,30 @@
+
+    <div class="home-wrapper">
+      <div class="home-container">
+        <div class="home-component">
+          <div class="size-col size-3  ">
+            <div class="flex-50"></div>
+            <div class="flex-50 hz-seperator">
+              <div class="link-block" *ngFor="let link of routerLinks">
+                <a [routerLink]="link.path">{{link.name}}</a>
+              </div>
+            </div>
+          </div>
+          <div class=" size-col size-7 bg-white  ">
+            <router-outlet></router-outlet>
+          </div>
+          <div class=" size-col size-2"></div>
+        </div>
+      </div>
+    </div>
+   <div *ngIf="isOpened">
+    <app-warning-modal [showModal]="isOpened" [outsideClickable]="isOpened" (onClickedOutSide)="isOpened=false">
+      <h1 header>Warning</h1>
+      <p body>You do not have permission</p>
+    
+      <!-- <div footer>
+        <button mat-flat-button color="primary" class="cancelbtn" (click)="onContinue()">Continue</button>
+        <button mat-flat-button color="warn" class="deletebtn" (click)="onLoggingOut()">Log Out</button>
+      </div> -->
+    </app-warning-modal>
+   </div>

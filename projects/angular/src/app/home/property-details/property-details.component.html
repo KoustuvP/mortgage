@@ -1,0 +1,74 @@
+<h3 class="f-w-b">Property Details</h3>
+<p>We need some more information about the property so that we can assess whether it's suitable for this to lend
+    against.</p>
+
+<h5 class="f-w-b">Your Property Address</h5>
+
+<p>Please tell us the address of the property you want to mortgage</p>
+
+<div>
+    <mat-form-field class="">
+        <mat-label>Postal code</mat-label>
+        <input type="text" matInput [formControl]="postalCodeControl">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="postalCodeControl.hasError('required')">
+            Postal code is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Address</mat-label>
+        <input type="text" matInput [formControl]="addressControl">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="postalCodeControl.hasError('required')">
+            Address code is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<h5 class="f-w-b">Your Property Details</h5>
+<div>
+    <mat-form-field >
+        <mat-label>Property type</mat-label>
+        <mat-select [formControl]="propertyType">
+          <mat-option *ngFor="let type of propertyTypes" [value]="type">
+            {{type}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Number of Bed room</mat-label>
+        <input type="text" matInput [formControl]="numberOfBedrooms">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="numberOfBedrooms.hasError('required')">
+            Bedroom number is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<p>Approximately when was the property built?</p>
+<div>
+    <button mat-stroked-button [ngClass]="{'selected': text === propertyBuilt.value}"  *ngFor="let text of buttonTexts" (click)="setPropertyBuilt(text)">{{text}}</button>
+</div>
+<div>
+    <mat-form-field >
+        <mat-label>How old is your property</mat-label>
+        <mat-select [formControl]="propertyAge">
+          <mat-option *ngFor="let propertyAge of propertyAges" [value]="propertyAge">
+            {{propertyAge}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<p>Is the property covered by a structuer warranty (e.g. NHBC Cover?)</p>
+<button mat-stroked-button  (click)=setCoverage(true)>Yes</button>
+<button mat-stroked-button  (click)=setCoverage(false)>No</button>
+<div>
+    <p>Tenure type?</p>
+    <button mat-stroked-button [ngClass]="{'selected': tenure === tenureType.value}"  *ngFor="let tenure of tenures" (click)="setTenureType(tenure)">{{tenure}}</button>
+</div>
+<div>
+    <button mat-flat-button color="warn" [disabled]="!propertyDetailsForm.valid" class="oval-btn" (click)="onSaveAndContinue()">Save_continue</button>
+</div>
+<app-notice></app-notice>

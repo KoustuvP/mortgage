@@ -1,0 +1,13 @@
+.notification {
+    background-color: yellowgreen;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.close {
+    cursor: pointer;
+}

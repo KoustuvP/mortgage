@@ -1,0 +1,111 @@
+<h3 class="f-w-b">Confirm Mortgage</h3>
+
+<p>Thank you for seletion a mortgage product. you can download the mortgage illustrations below.
+    Please confirm taht you'd like to proceed with your chosen product or alternatively go back and choose a difrent
+    rate.</p>
+
+<h3><strong>Your chosen Mortgage</strong></h3>
+<mat-divider></mat-divider>
+<p>
+    Fixed 5 Years
+</p>
+<div class="d-f">
+    <div class="f-i">
+        <h4>Buyer Type ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Repayment method ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Mortgage term ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Early repayment charge(ending your mortgage) ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Estimated property value or purchase</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Borrowing amount</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Loan to value(LTV) ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Initial rate</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Then changing to Santander's Follow-on rate(currently)</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Differential to bank of England base rate </h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>When does this rate finish</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Product fee</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Product fee added to loan amount</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Additionalbenefits ?</h4>
+        <p></p>
+    </div>
+    <div class="f-i">
+        <h4>Montly payment amount</h4>
+        <p>See your Mortage Illustration for detaIs</p>
+    </div>
+</div>
+<button mat-flat-button color="warn" class="oval-btn">Select a drfferent mongage</button>
+<h2>Download your Mortgage illustartion</h2>
+<mat-divider></mat-divider>
+<p>Most of our customers ptint of download the Mort9age illustrations for thier records as we don·1send it sepera1ely by
+    po.&t.you can viE-w and
+    prim as marry Mortgageillustrations as you want.However onlythe mongage you select andsubmitwill be valid
+</p>
+<div class="d-f d-border">
+    <div class="f-i">
+        <p>ortgageillustration.pdf</p>
+    </div>
+    <div class="f-i">
+        <button mat-flat-button color="warn" class="oval-btn">Download</button>
+    </div>
+</div>
+<form [formGroup]="mortgageConfirmationForm" (ngSubmit)="onContinue()">
+    <div class="m-t-10">
+        <mat-checkbox color="primary" [formControl]="isAccepted"></mat-checkbox>
+        <small>
+            I have chosen to complete my application online and as such i have not been provided with any advice. This means i will
+            not benefit from the
+            protection that advice provides and Santander have no accessed th esuitability of my mortgage for me.
+        
+        </small><br/>
+        <mat-checkbox color="primary" [formControl]="isHappy"></mat-checkbox>
+        <small>
+            I am happy to proceed wi1h the product I have selected.
+        </small>
+    </div>
+    <div class="d-f">
+        <div class="f-i">
+            <button mat-flat-button color="warn" class="oval-btn">Save and back later</button>
+        </div>
+        <div class="f-i">
+            <button mat-flat-button color="warn" class="oval-btn" type="submit" [disabled]="getError()">Continue</button>
+        </div>
+    </div>        
+</form>

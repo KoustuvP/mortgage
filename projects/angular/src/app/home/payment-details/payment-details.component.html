@@ -1,0 +1,86 @@
+<h3>Payment Details</h3>
+<p>
+    We'd like to confirm some payment details for your mortgage and also understand if you're expecting any change to
+    your circumstances
+</p>
+<h5>Your current Circumstances</h5>
+<p>
+    We appreciate this may change in thefuture. Over the life of the mortgage there may be events that
+    could increase or decrease your income and/or outgoingjobs.for example,changing jobs,redundancy.stating a family,
+    retirement,school fees
+    or property repairs it's important that you consider whether you canstillafford your repayments if any significant
+    changes occur. If any changes are known then tell JS below and provide details of how you'll stillbe able to afford
+    your mortgage.
+</p>
+<h5>
+    Are you currently aware of any changes to your circumstances in the next 2 yearsthat may affect your ability to pay
+    this mortgage?*
+</h5>
+<button mat-stroked-button (click)="setCircumstances(1)">Yes</button>
+<button mat-stroked-button (click)="setCircumstances(0)">No</button>
+<h5>Your Direct Debit details</h5>
+<p>Which account do you want your monthly payments to be made from?</p>
+<div>
+    <mat-form-field class="">
+        <mat-label>Sort Code</mat-label>
+        <input type="number" matInput [formControl]="sortCode">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="sortCode.hasError('required')">
+            Sort code is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Account Number</mat-label>
+        <input type="number" matInput [formControl]="accountNumber">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="accountNumber.hasError('required')">
+            Account number is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="">
+        <mat-label>Account Holder Name</mat-label>
+        <input type="text" matInput [formControl]="accountHolderName">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="accountHolderName.hasError('required')">
+            Account holder name is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div class="d-f">
+    <button mat-stroked-button class="f-i" (click)="setDayOfPayment(1)">On first day of each month</button>
+    <button mat-stroked-button class="f-i" (click)="setDayOfPayment(0)">On a specific day of each month</button>
+</div>
+<div>
+    <h5>Direct Debt guarantee</h5>
+    <p>
+        This guarantee is offered by all banks and building societies that acceptinstructions to pay Direct Debts
+    </p>
+    <ul>
+        <li>
+            If there are any changes to the amount date, or frequency of your Direct Debit Sanatander willnotify you
+            five working daysin advance of your account being debited or as otherwise agreed.
+        </li>
+        <li>
+            If you request Sanatander to collect a payment confirmation of the amount and date wil be given to you at
+            the
+            time of the request.
+        </li>
+        <li>
+            If an error is made in the payment of your Direct Debt,either by us, Santander UK pie, or by your bank or
+            building society. You are entitled to a full and immediate refund from your bank or building society.
+        </li>
+        <li>
+            If you recieve a refund you are not entitledto,you must pay it back when Santander UK pie asks you to.
+        </li>
+        <li>
+            You can cancel a Direct debit at any time by simply contacting your bank or building society.
+            written confirmation may be reqLired.
+        </li>
+    </ul>
+</div>
+<button mat-flat-button color="warn" class="oval-btn"  (click)="onSaveAndContinue()"> Save and Continue</button>
+<app-notice></app-notice>

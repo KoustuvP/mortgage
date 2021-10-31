@@ -1,0 +1,4 @@
+<div @fadeInOut class="notification">
+    <span>{{notificationService.getMessage()|async}}</span>
+    <button mat-icon-button aria-label="close" clas="close" (click)="close()"><mat-icon>close</mat-icon></button>
+</div>

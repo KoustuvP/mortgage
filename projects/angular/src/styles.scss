@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: whitesmoke;
+}
+
+.seaction-heading {
+  text-align: center;
+  margin: 30px 30px;
+  font-size: 2.5rem;
+}
+
+.content-section {
+  padding: 40px 0px;
+}
+
+

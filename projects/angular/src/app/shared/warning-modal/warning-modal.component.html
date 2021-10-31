@@ -1,0 +1,9 @@
+<div class="modal" *ngIf="showModal">
+    <div class="container">
+        <div class="modal-content" (appClickOutside)="closeModal()">
+            <ng-content select="[header]"></ng-content>
+            <ng-content select="[body]"></ng-content>
+            <ng-content select="[footer]"></ng-content>
+        </div>
+    </div>
+</div>

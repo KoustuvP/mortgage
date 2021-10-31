@@ -1,0 +1,15 @@
+<app-header [userName]="userName"></app-header>
+<router-outlet></router-outlet>
+<app-warning-modal [showModal]="showTimeOut">
+  <h1 header>Warning</h1>
+  <p body>{{idleState}}</p>
+
+  <div footer>
+    <button mat-flat-button color="primary" class="cancelbtn" (click)="onContinue()">Continue</button>
+    <button mat-flat-button color="warn" class="deletebtn" (click)="onLoggingOut()">Log Out</button>
+  </div>
+</app-warning-modal>
+<app-notification *ngIf="notificationService.getMessage()|async"></app-notification>
+<app-footer></app-footer>
+
+<app-loader *ngIf="isLoading"></app-loader>
