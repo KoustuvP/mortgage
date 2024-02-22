@@ -1,4 +1,4 @@
-# Santander Workspace
+# Bank Workspace
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13. This project is containing express to serve the file in production mode and ng-bootstrap and Angular Material to get start with Component design.
 
